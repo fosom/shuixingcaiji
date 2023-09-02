@@ -1,0 +1,9 @@
+admin
+#domain#
+#domain#admin
+#domain#_admin
+#domain#@admin
+manager
+root
+guanli
+gl
